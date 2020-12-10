@@ -1,5 +1,3 @@
-import path from 'path';
-import fs from 'fs';
 import { injectable, inject } from 'tsyringe';
 
 import AppError from '@shared/errors/AppError';
@@ -17,7 +15,7 @@ interface IRequest {
 }
 
 @injectable()
-class UpdateProfile {
+class UpdateProfileService {
   constructor(
     @inject('UsersRepository')
     private usersRepository: IUsersRepository,
@@ -71,4 +69,4 @@ class UpdateProfile {
   }
 }
 
-export default UpdateProfile;
+export default UpdateProfileService;
